@@ -21,6 +21,13 @@
   <div id="app">
 
     <h1> ciao {{ title }} </h1>
+    <div> 
+      <img :src="img.path" :alt="img.alt">
+    </div>
+
+    <h1 v-if="!isClicked">non ho cliccato</h1>
+    <h1 v-else> ho cliccato </h1>
+    <button @click="isClicked = !isClicked"> bottote che toggle con v if</button>
 
   </div>
   
